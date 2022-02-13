@@ -1,6 +1,7 @@
 from src.square_method import Square
 from src.trapezoidal_method import Trapezoidal
 from src.midpoint import MidPoint
+from src.Simpson import Simpson
 from scipy.integrate import quad
 
 
@@ -9,19 +10,6 @@ from scipy.integrate import quad
 def f(x):
     return 1 / (1 + x ** 2)
 
-
-# methode trapezes
-def MTrapezes(f, a, b, N):
-    """Cette fonction permet de calculer une approximation de l'integrale d'une fonction
-    par la methode des trapezes."""
-
-    longueur = (b - a) / N
-    aire = 0
-
-    for i in range(N):
-        aire += (f(a + i * longueur) + f(a + (i + 1) * longueur)) * longueur / 2
-
-    return (aire)
 
 
 if __name__ == '__main__':
@@ -44,3 +32,7 @@ if __name__ == '__main__':
     # Midpoint method
     # mp_method = MidPoint(f, 0, 2, N)
     # print(mp_method.MPmethod())
+    # ==============
+    # Simpson method
+    simpson_method = Simpson(f, 0, 2, N)
+    print(simpson_method.MSimpson())
