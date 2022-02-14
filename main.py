@@ -41,3 +41,6 @@ if __name__ == '__main__':
     # Gauss Legendre method
     # gl2 = GL(f, 0, 2, N)
     # print(gl2.gl2())
+    # Gauss Legendre method with 3 knots
+    gl3 = GL(f, 0, 2, N)
+    print(gl3.gl3())

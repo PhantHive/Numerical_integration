@@ -30,8 +30,11 @@ class GL:
 
         gl3 = 0
         for i in range(self.N):
-            pass
+            xi = self.a + i * self.h
+            ci = xi + self.h / 2
+            gl3 += (self.h / 18) * (5 * self.f(ci - (sqrt(3/20) * self.h)) + 8 * self.f(ci) + 5 * self.f(ci + sqrt(3/20) * self.h))
 
+        return gl3
 
 
 
