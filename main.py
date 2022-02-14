@@ -1,7 +1,8 @@
 from src.square_method import Square
 from src.trapezoidal_method import Trapezoidal
 from src.midpoint import MidPoint
-from src.Simpson import Simpson
+from src.simpson import Simpson
+from src.gauss_legendre import GL
 from scipy.integrate import quad
 
 
@@ -27,12 +28,16 @@ if __name__ == '__main__':
     # ==============
     # Trapezoidal method
     # trapez_method = Trapezoidal(f, 0, 2, N)
-    # print(trapez_method.TMethod())
+    # print(trapez_method.TMethod()) ii
     # ==============
     # Midpoint method
     # mp_method = MidPoint(f, 0, 2, N)
     # print(mp_method.MPmethod())
     # ==============
     # Simpson method
-    simpson_method = Simpson(f, 0, 2, N)
-    print(simpson_method.MSimpson())
+    # simpson_method = Simpson(f, 0, 2, N)
+    # print(simpson_method.MSimpson())
+    # ==============
+    # Gauss Legendre method
+    # gl2 = GL(f, 0, 2, N)
+    # print(gl2.gl2())
