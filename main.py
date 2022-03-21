@@ -16,7 +16,7 @@ def f(x):
 if __name__ == '__main__':
     N = 10
 
-    print(quad(f, 0, 2))
+    val, err = quad(f, 0, 2)
 
     # ==============
     # Square method
@@ -42,5 +42,5 @@ if __name__ == '__main__':
     # gl2 = GL(f, 0, 2, N)
     # print(gl2.gl2())
     # Gauss Legendre method with 3 knots
-    gl3 = GL(f, 0, 2, N)
-    print(gl3.gl3())
+    # gl3 = GL(f, 0, 2, N)
+    # print(gl3.gl3())
